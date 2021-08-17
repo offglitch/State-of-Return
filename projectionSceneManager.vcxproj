@@ -180,9 +180,9 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="HeartMagic.cpp" />
     <ClCompile Include="src\BinaryShapes1.cpp" />
     <ClCompile Include="src\Cycles.cpp" />
+    <ClCompile Include="src\HeartMagic.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\BouncingBallsSource.cpp" />

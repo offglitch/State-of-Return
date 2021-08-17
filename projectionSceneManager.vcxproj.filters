@@ -307,13 +307,13 @@
     <ClCompile Include="..\..\..\addons\ofxPiMapper\src\Utils\HomographyHelper.cpp">
       <Filter>addons\ofxPiMapper\src\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="HeartMagic.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\BinaryShapes1.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Cycles.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HeartMagic.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

@@ -10,10 +10,15 @@ void ofApp::setup(){
 
 	// Register our sources.
 	// This should be done before mapper.setup().
-	//piMapper.registerFboSource(customSource);
-    //piMapper.registerFboSource(bouncingBallsSource);
-    piMapper.registerFboSource(heartMagicSource);
-    piMapper.registerFboSource(cyclesSource);
+	piMapper.registerFboSource(customSource);
+    piMapper.registerFboSource(bouncingBallsSource);
+    piMapper.registerFboSource(movingRectSource);
+
+	piMapper.registerFboSource(heartMagicSource);
+	piMapper.registerFboSource(cyclesSource);
+
+	piMapper.registerFboSource(binarySource);
+
 	piMapper.setup();
     
     //loading a dummy image to project on

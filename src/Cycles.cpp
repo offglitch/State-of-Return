@@ -23,7 +23,7 @@ void Cycles::setup()
 
 void Cycles::update()
 {
-	phase+=1;
+	phase += 1;
 }
 
 void Cycles::draw()
@@ -60,8 +60,8 @@ void Cycles::arc(float phase, float radius)
 	ofTranslate(fbo->getWidth() / 2, fbo->getHeight() / 2);
 
 	ofPath path;
-	float startAngle = ofMap(sin(ofDegToRad(phase/2)), -1, 1, 179,0);
-	float endAngle = ofMap(sin(ofDegToRad(phase/2)), -1, 1, -179,0);
+	float startAngle = ofMap(sin(ofDegToRad(phase / 2)), -1, 1, 179, 0);
+	float endAngle = ofMap(sin(ofDegToRad(phase / 2)), -1, 1, -179, 0);
 	path.arc(0, 0, radius, radius, phase + startAngle, phase + endAngle);
 	path.setCircleResolution(100);
 	path.setStrokeWidth(4);
@@ -74,11 +74,11 @@ void Cycles::arc(float phase, float radius)
 	ofColor chaos;
 	chaos.r = ofRandom(0, 255);
 	chaos.g = ofRandom(0, 255);
-	chaos.b = ofRandom(0, 255); 
-	ofSetColor(chaos);
+	chaos.b = ofRandom(0, 255);
+	//ofSetColor(chaos);
 	if (ofGetElapsedTimeMillis() - startTime < 30000) {
 		float percent = ofMap(endAngle, startAngle, 160, 0, 1, true);
-		ofColor c = initialwhite.getLerped(blue, percent);
+		ofColor c = purple.getLerped(blue, percent);
 		path.setColor(c);
 	}
 	else if (ofGetElapsedTimeMillis() - startTime < 45000) {
@@ -86,7 +86,7 @@ void Cycles::arc(float phase, float radius)
 		ofColor c = green.getLerped(blue, percent);
 		path.setColor(c);
 	}
-	else if(ofGetElapsedTimeMillis() - startTime < 60000){
+	else if (ofGetElapsedTimeMillis() - startTime < 60000) {
 		float percent = ofMap(endAngle, startAngle, 80, 1, 0, true);
 		ofColor c = green.getLerped(blue, percent);
 		path.setColor(c);
@@ -108,4 +108,3 @@ void Cycles::arc(float phase, float radius)
 	path.draw();
 	ofPopMatrix();
 }
-

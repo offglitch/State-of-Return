@@ -65,7 +65,7 @@ void HeartMagic::draw() {
 				if (deg == param % 360) {
 
 					ofFill();
-					ofDrawCircle(this->make_point(deg * DEG_TO_RAD) * scale, 4);
+					ofDrawCircle(this->make_point(deg * DEG_TO_RAD) * scale, 10);
 				}
 			}
 
@@ -92,7 +92,7 @@ void HeartMagic::draw() {
 				if (deg == param % 360) {
 
 					ofFill();
-					ofDrawCircle(this->make_point(deg * DEG_TO_RAD) * scale, 4);
+					ofDrawCircle(this->make_point(deg * DEG_TO_RAD) * scale, 12);
 				}
 			}
 
@@ -195,7 +195,7 @@ void HeartMagic::draw() {
 
 	}
 
-	else if (ofGetElapsedTimeMillis() - startTime < 170000) {
+	else if (ofGetElapsedTimeMillis() - startTime < 150000) {
 		for (auto scale = 1; scale < 2; scale += 1) {
 
 			vector<glm::vec2> vertices;
@@ -213,7 +213,7 @@ void HeartMagic::draw() {
 
 					ofFill();
 					ofSetColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
-					ofDrawCircle(this->make_point(deg * DEG_TO_RAD) * scale, 4);
+					ofDrawCircle(this->make_point(deg * DEG_TO_RAD) * scale, 20);
 				}
 			}
 

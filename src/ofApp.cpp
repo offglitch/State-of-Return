@@ -10,9 +10,6 @@ void ofApp::setup(){
 
 	// Register our sources.
 	// This should be done before mapper.setup().
-	piMapper.registerFboSource(customSource);
-    piMapper.registerFboSource(bouncingBallsSource);
-    piMapper.registerFboSource(movingRectSource);
 
 	piMapper.registerFboSource(heartMagicSource);
 	piMapper.registerFboSource(cyclesSource);
